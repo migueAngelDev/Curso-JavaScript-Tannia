@@ -10,18 +10,6 @@
 
 texto("2030 espero por ti"); */
 
-function invertirCadena(cadena) {
-  var nuevaCadena = "";
-  for (var i = cadena.length - 1; i >= 0; i--) {
-    nuevaCadena += cadena[i];
-  }
-  return console.log(nuevaCadena);
-}
-invertirCadena("hola mi bida");
-
-// ⏫
-//esto Noooooooooooo
-
 /* console.log('La cadena original es: "' + cadenaADividir + '"'); */
 // 2. Números y condicionales: Escribe una función que tome un número como parámetro y devuelva una cadena que contenga todos los números enteros del 1 al número proporcionado, separados por comas.
 
@@ -52,3 +40,36 @@ cadena(5); */
 }
 
 Multiplos(15); */
+
+// 3. Booleanos y objetos: Escribe una función que tome un objeto como parámetro y devuelva verdadero si todos los valores en el objeto son booleanos verdaderos, y falso de lo contrario.
+
+// Por ejemplo, si se proporciona el objeto {a: true, b: false, c: true}, la función debe devolver falso.
+
+// 4. Undefined, null, NaN y funciones: Escribe una función que tome un arreglo de valores como parámetro y devuelva la suma de los valores numéricos en el arreglo. La función debe ignorar los valores que sean undefined, null o NaN.
+
+// Por ejemplo, si se proporciona el arreglo [1, null, "hola", undefined, NaN, 3], la función debe devolver 4.
+
+// 5. Funciones y tipos de operadores: Escribe una función que tome un arreglo de números como parámetro y devuelva un objeto con dos propiedades: "suma" y "promedio". La propiedad "suma" debe contener la suma de todos los números en el arreglo, y la propiedad "promedio" debe contener el promedio de los números en el arreglo.
+
+// Por ejemplo, si se proporciona el arreglo [1, 2, 3, 4, 5, 6], la función debe devolver el objeto {suma: 21, promedio: 3.5}.
+
+/* function numeros(n = []) {
+  let suma = 0;
+  for (let i = 0; i < n.length; i++) {
+    suma += n[i];
+  }
+
+  let promedio = suma / n.length;
+
+  let objeto = {
+    sumita: suma,
+    promedio: promedio,
+  };
+
+  console.log(objeto);
+}
+
+numeros([10, 10, 10, 10, 10]);
+numeros([1, 2, 3, 4, 5, 6]); */
+
+// push es de arreglos asi que no puedo usarlo
