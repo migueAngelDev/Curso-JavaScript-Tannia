@@ -397,8 +397,8 @@ funciones({ a: 1, b: function () {}, c: function () {} }); */
   console.log(resultado);
 }
 
-numero(5); */
-
+numero(5);
+ */
 // terminar de ver como quitar la ultima coma
 
 // EJERCICIO 2
@@ -485,4 +485,134 @@ contarElementos([true, false, true, false, true]); */
 
 // Un número de Armstrong es un número que es igual a la suma de las potencias de sus dígitos.
 
-// Por ejemplo, sSi se proporciona el número 153, la función debe devolver true.
+// Por ejemplo, Si se proporciona el número 153, la función debe devolver true.
+
+// Por ejemplo, tomemos el número 153. Tiene tres dígitos (1, 5 y 3). Si elevamos cada uno de estos dígitos al cubo (3^3 = 27, 5^3 = 125 y 1^3 = 1) y sumamos los resultados (27 + 125 + 1 = 153), obtenemos el número original, que es 153. Por lo tanto, 153 es un número Armstrong.
+
+// Algunos otros ejemplos de números Armstrong son 0, 1, 370, 371, 407, 1634, etc.
+
+function numeroNarcisita(n = 0) {
+  let separar = Array.from(String(n), Number);
+  let longitud = separar.length;
+  let suma = 0;
+
+  /* console.log("*************");
+  console.log(separar);
+  console.log("*************");
+  console.log(longitud);
+  console.log("*************"); */
+
+  for (let i = 0; i < longitud; i++) {
+    let potencia = separar[i];
+
+    /* console.log("*************");
+    console.log(potencia); */
+
+    for (let j = 1; j < longitud; j++) {
+      potencia *= separar[i];
+
+      /* console.log("*************");
+      console.log(potencia); */
+    }
+
+    suma += potencia;
+  }
+
+  if (suma === n) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+}
+
+numeroNarcisita(153);
+
+// EJERCICIO 2
+
+// Arreglos y objetos: Escribe una función que tome un arreglo de objetos como parámetro y devuelva un objeto que contenga la suma de todas las propiedades numéricas de todos los objetos del arreglo.
+
+//  Por ejemplo, si se proporciona el arreglo [{a: 1, b: 2}, {c: 3, d: "cuatro"}], la función debe devolver el objeto {a: 1, b: 2, c: 3}.
+
+// EJERCICIO 3
+
+// Funciones y condicionales: Escribe una función que tome una función y un número como parámetros y llame a la función el número de veces indicado.
+
+// Por ejemplo, si se proporciona la función console.log y el número 3, la función debe llamar a console.log 3 veces.
+
+// EJERCICIO 4
+
+// Booleans y cadenas de texto: Escribe una función que tome un arreglo de booleanos como parámetro y devuelva una cadena de texto que contenga el número de elementos true y false del arreglo, separados por un guión medio.
+
+// Por ejemplo, si se proporciona el arreglo [true, false, true, false, true], la función debe devolver la cadena "3-2".
+
+/* function contar(n = []) {
+  let True = 0;
+  let False = 0;
+  let i = 0;
+
+  do {
+    if (n[i] === true) {
+      True++;
+    } else if (n[i] === false) {
+      False++;
+    }
+    i++;
+  } while (i < n.length);
+
+  console.log(True + "-" + False);
+}
+
+contar([true, false, true, false, true]); */
+
+// EJERCICIO 5
+
+// Números y cadenas de texto: Escribe una función que tome un número como parámetro y devuelva una cadena de texto que contenga todos los números desde el número proporcionado hasta 1, separados por comas.
+
+// Por ejemplo, si se proporciona el número 5, la función debe devolver la cadena "5,4,3,2,1".
+
+/* function n(number = 0) {
+  let resultado = "";
+  let contador = number;
+
+  do {
+    resultado += contador;
+
+    contador--;
+    resultado += ",";
+  } while (contador);
+
+  console.log(resultado);
+}
+
+n(5); */
+
+// terminar de ver como quitar la ultima coma
+
+// *************************************************************************************************************************************************************************************************************************************************************************
+
+// CICLO TRY CATCH
+
+// EJERCICIO 1
+
+// Números y manejo de errores: Escribe una función que tome dos números como parámetros y devuelva el resultado de la división del primer número por el segundo.
+
+// Por ejemplo, si se proporciona los números 10 y 0, la función debe devolver el mensaje de error "No se puede dividir por cero".
+
+function division(n1 = 0, n2 = 0) {
+  try {
+    if (n2 === 0) {
+      throw new Error("No se puede dividir por cero");
+    }
+    return n1 / n2;
+  } catch (error) {
+    return error.message;
+  }
+}
+
+console.log(division(10, 0));
+
+// EJERCICIO 2
+
+// Arreglos y manejo de errores: Escribe una función que tome un arreglo como parámetro y devuelva el primer elemento del arreglo.
+
+// Por ejemplo, si se proporciona el arreglo [], la función debe devolver el mensaje de error "El arreglo está vacío".
