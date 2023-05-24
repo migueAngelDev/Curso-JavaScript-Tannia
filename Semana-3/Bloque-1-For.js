@@ -266,8 +266,8 @@ numeroOrden([3, 1, 4, 2, 5]); */
     arr.push(key + "-" + text[key]);
   }
   console.log(arr.join("_"));
-} */
-
+}
+ */
 /* function object(text = {}) {
   let nuevo = "";
 
@@ -338,15 +338,15 @@ objeto({ b: 2, a: 1, c: 3 }); */
 
 // Por ejemplo, si se proporciona el objeto {a: 1, b: 2, c: 3}, la función debe devolver el objeto {1: "a", 2: "b", 3: "c"}.
 
-/* function intercambio(obj = {}) {
-  let nuevo = {};
-  for (const key in obj) {
-    nuevo[obj[key]] = key;
-  }
-  console.log(nuevo);
-}
+// function intercambio(obj = {}) {
+//   let nuevo = {};
+//   for (const key in obj) {
+//     nuevo[obj[key]] = key;
+//   }
+//   console.log(nuevo);
+// }
 
-intercambio({ a: 1, b: 2, c: 3 }); */
+// intercambio({ a: 1, b: 2, c: 3 });
 
 // [obj[key]] esto me va a devolver los valores del objeto y se lo estoy dando al nuevo objeto y asu vez estos valores se van a convetir en las nuevas claves con lo que es = key
 
@@ -383,23 +383,24 @@ funciones({ a: 1, b: function () {}, c: function () {} }); */
 
 // Por ejemplo, si se proporciona el número 5, la función debe devolver la cadena "1,2,3,4,5".
 
-/* function numero(n = 0) {
-  let resultado = "";
-  let contador = 1;
+// function numero(n = 0) {
+//   let resultado = "";
+//   let contador = 1;
 
-  while (contador <= n) {
-    resultado += contador;
+//   while (contador <= n) {
+//     resultado += contador;
 
-    contador++;
+//     contador++;
 
-    resultado += ",";
-  }
-  console.log(resultado);
-}
+//     resultado += ",";
+//   }
+//   resultado = resultado.slice(0, resultado.length - 1);
+//   console.log(resultado);
+// }
 
-numero(5);
- */
-// terminar de ver como quitar la ultima coma
+// numero(5);
+
+// terminar de ver como quitar la ultima coma : listo
 
 // EJERCICIO 2
 
@@ -411,24 +412,24 @@ numero(5);
 
 // Este es el que habias hecho en el salón, pero con el ciclo for?
 
-/* function esPrimo(numero = 0) {
-  if (numero < 2) {
-    console.log(false);
-  }
+// function esPrimo(numero = 0) {
+//   if (numero < 2) {
+//     console.log(false);
+//   }
 
-  let division = 2;
-  while (division < numero) {
-    if (numero % division === 0) {
-      console.log(false);
-      return;
-    }
-    division++;
-  }
+//   let division = 2;
+//   while (division < numero) {
+//     if (numero % division === 0) {
+//       console.log(false);
+//       return;
+//     }
+//     division++;
+//   }
 
-  console.log(true);
-}
+//   console.log(true);
+// }
 
-esPrimo(29); */
+// esPrimo(4);
 
 // return si se divide entonces ya no es valido, es que cuando pongo 4 me visualiza los dos
 
@@ -436,7 +437,7 @@ esPrimo(29); */
 
 Arreglos y objetos: Escribe una función que tome un arreglo de objetos como parámetro y devuelva un objeto que contenga la suma de todas las propiedades numéricas de todos los objetos del arreglo.
 
-Por ejemplo, si se proporciona el arreglo [{a: 1, b: 2}, {c: 3, d: "cuatro"}], la función debe devolver el objeto {a: 1, b: 2, c: 3}. */
+Por ejemplo, si se proporciona el arreglo [{a: 1, b: 2}, {a: 2, c: 3, d: "cuatro"}], la función debe devolver el objeto {a: 3, b: 2, c: 3}. */
 
 /* EJERCICIO 4
 
@@ -444,9 +445,21 @@ Funciones y condicionales: Escribe una función que tome una función y un núme
 
 Por ejemplo, si se proporciona la función console.log y el número 3, la función debe llamar a console.log 3 veces. */
 
-/* function llamarFuncion(fn, numero) {}
+// function inv(funcion, n = 0) {
+//   let i = 0;
+//   while (i < n) {
+//     console.log(funcion);
+//     i++;
+//   }
+// }
 
-llamarFuncion(console.log("Hola"), 3); */
+// function u() {
+//   return "aer";
+// }
+
+// inv(u(), 3);
+/* function llamarFuncion(numero) {}
+
 
 // EJERCICIO 5
 
@@ -489,33 +502,36 @@ contarElementos([true, false, true, false, true]); */
 
 // Por ejemplo, tomemos el número 153. Tiene tres dígitos (1, 5 y 3). Si elevamos cada uno de estos dígitos al cubo (3^3 = 27, 5^3 = 125 y 1^3 = 1) y sumamos los resultados (27 + 125 + 1 = 153), obtenemos el número original, que es 153. Por lo tanto, 153 es un número Armstrong.
 
-// Algunos otros ejemplos de números Armstrong son 0, 1, 370, 371, 407, 1634, etc.
+// Un número narcisista es aquel que es igual a la suma de cada uno de sus dígitos elevados a la "n" potencia (donde "n" es el número de cifras del número). Los primeros números narcisistas son: 1, 2, 3, 4, 5, 6, 7, 8, 9, 153, 370, 371, 407, 1634, 8208, 9474 y 54748.
 
-function numeroNarcisita(n = 0) {
+/* function numeroNarcisita(n = 0) {
   let separar = Array.from(String(n), Number);
-  let longitud = separar.length;
   let suma = 0;
 
-  /* console.log("*************");
-  console.log(separar);
-  console.log("*************");
-  console.log(longitud);
-  console.log("*************"); */
+  // console.log("*************");
+  // console.log(separar);
+  // console.log("*************");
+  // console.log(longitud);
+  // console.log("*************");0
 
-  for (let i = 0; i < longitud; i++) {
+  for (let i = 0; i < separar.length; i++) {
+    // console.log(i);
+
     let potencia = separar[i];
 
-    /* console.log("*************");
-    console.log(potencia); */
+    //  console.log("*************");
+    // console.log(potencia);
 
-    for (let j = 1; j < longitud; j++) {
-      potencia *= separar[i];
-
-      /* console.log("*************");
-      console.log(potencia); */
+    for (let j = 1; j < separar.length; j++) {
+      //  potencia *= separar[i];
+      // j no porque esta iterando la elevacion
+      potencia = potencia * separar[i];
+      // console.log(potencia);
     }
 
-    suma += potencia;
+    // suma += potencia;
+    suma = suma + potencia;
+    // console.log(suma);
   }
 
   if (suma === n) {
@@ -525,13 +541,24 @@ function numeroNarcisita(n = 0) {
   }
 }
 
-numeroNarcisita(153);
+numeroNarcisita(153); */
 
 // EJERCICIO 2
 
 // Arreglos y objetos: Escribe una función que tome un arreglo de objetos como parámetro y devuelva un objeto que contenga la suma de todas las propiedades numéricas de todos los objetos del arreglo.
 
 //  Por ejemplo, si se proporciona el arreglo [{a: 1, b: 2}, {c: 3, d: "cuatro"}], la función debe devolver el objeto {a: 1, b: 2, c: 3}.
+
+// function arreglo(obj = [{}]) {
+//   let funciones = {};
+
+//   for (const key in obj) {
+//   }
+// }
+// arreglo([
+//   { a: 1, b: 2 },
+//   { c: 3, d: "cuatro" },
+// ]);
 
 // EJERCICIO 3
 
@@ -598,7 +625,7 @@ n(5); */
 
 // Por ejemplo, si se proporciona los números 10 y 0, la función debe devolver el mensaje de error "No se puede dividir por cero".
 
-function division(n1 = 0, n2 = 0) {
+/* function division(n1 = 0, n2 = 0) {
   try {
     if (n2 === 0) {
       throw new Error("No se puede dividir por cero");
@@ -609,10 +636,22 @@ function division(n1 = 0, n2 = 0) {
   }
 }
 
-console.log(division(10, 0));
+console.log(division(10, 0)); */
 
 // EJERCICIO 2
 
 // Arreglos y manejo de errores: Escribe una función que tome un arreglo como parámetro y devuelva el primer elemento del arreglo.
 
 // Por ejemplo, si se proporciona el arreglo [], la función debe devolver el mensaje de error "El arreglo está vacío".
+
+// let empanadas = {
+//   ingredientes: ["masa", "jamon", "queso", "aceite"],
+//   costo: [15, 50, 70, 55],
+//   function() {},
+// };
+
+// console.table(empanadas);
+
+// let tr = ["tannia", "miguel", "luis", "arianna", "gema"];
+
+// console.table();
