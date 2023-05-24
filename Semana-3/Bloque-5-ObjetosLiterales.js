@@ -40,15 +40,12 @@ console.log(producto); */
     return num1 / num2;
   },
 };
-
 let num1 = parseInt(prompt("Ingrese un primer numero"));
 let num2 = parseInt(prompt("Ingrese un segundo numero"));
 let operacion = prompt(
   "Ingrese el tipo de operacion que desea hacer(sumacion, restar, multiplicar, dividir)"
 );
-
 let resultado;
-
 if (operacion === "sumar") {
   resultado = calculadora.sumar(num1, num2);
   console.log("El resultado es de la suma es: " + resultado);
@@ -68,6 +65,16 @@ if (operacion === "sumar") {
 // EJERCICIO 4
 
 // Propiedades calculadas: Crea un objeto llamado cuadrado con las propiedades lado, area y perimetro. La propiedad lado debe ser un número que se solicita al usuario mediante un prompt. Las propiedades area y perimetro deben ser calculadas en base al valor de la propiedad lado. Finalmente, muestra el objeto completo en la consola.
+
+let lado = parseFloat(
+  prompt("Ingresa un numero para el valor del lado del cuadrado")
+);
+
+let area = lado * lado;
+let perimetro = lado * 4;
+
+let cuadrado = { lado: lado, area: area, perimetro: perimetro };
+console.log(cuadrado);
 
 // EJERCICIO 5
 
