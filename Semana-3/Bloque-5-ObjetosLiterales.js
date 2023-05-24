@@ -26,7 +26,7 @@ console.log(producto); */
 
 // Métodos en objetos: Crea un objeto llamado calculadora con los métodos sumar, restar, multiplicar y dividir.Cada método debe recibir dos números como parámetros y retornar el resultado de la operación correspondiente.Luego, solicita al usuario mediante prompts que ingrese los dos números para realizar una operación y la operación a realizar(suma, resta, multiplicación o división) y muestra el resultado en la consola.
 
-/* let calculadora = {
+let calculadora = {
   sumar: function (num1, num2) {
     return num1 + num2;
   },
@@ -43,7 +43,7 @@ console.log(producto); */
 let num1 = parseInt(prompt("Ingrese un primer numero"));
 let num2 = parseInt(prompt("Ingrese un segundo numero"));
 let operacion = prompt(
-  "Ingrese el tipo de operacion que desea hacer(sumacion, restar, multiplicar, dividir)"
+  "Ingrese el tipo de operacion que desea hacer(sumar, restar, multiplicar, dividir)"
 );
 let resultado;
 if (operacion === "sumar") {
@@ -60,13 +60,13 @@ if (operacion === "sumar") {
   console.log("El resultado es de la división es: " + resultado);
 } else {
   console.log("Operación inválida");
-} */
+}
 
 // EJERCICIO 4
 
 // Propiedades calculadas: Crea un objeto llamado cuadrado con las propiedades lado, area y perimetro. La propiedad lado debe ser un número que se solicita al usuario mediante un prompt. Las propiedades area y perimetro deben ser calculadas en base al valor de la propiedad lado. Finalmente, muestra el objeto completo en la consola.
 
-let lado = parseFloat(
+/* let lado = parseFloat(
   prompt("Ingresa un numero para el valor del lado del cuadrado")
 );
 
@@ -74,7 +74,7 @@ let area = lado * lado;
 let perimetro = lado * 4;
 
 let cuadrado = { lado: lado, area: area, perimetro: perimetro };
-console.log(cuadrado);
+console.log(cuadrado); */
 
 // EJERCICIO 5
 
