@@ -47,10 +47,10 @@ console.log(filtrarPares([10, 15, 20, 25, 30])); */
 
 // Escribe una arrow function llamada `ordenarPorLongitud` que acepte un array de strings como parámetro y devuelva un nuevo array con las cadenas ordenadas de menor a mayor longitud.
 
-/* let ordenarPorLongitud = (strings) =>
-  strings.sort((a, b) => a.length - b.length);
+/* let ordenarPorLongitud = (cadenas) =>
+  cadenas.sort((a, b) => a.length - b.length);
 
-console.log(ordenarPorLongitud(["Hola", "esto", "es", "una", "prueba"])); */
+console.log(ordenarPorLongitud(["Hola", "mi", "bida", "vamos", "por", "más"])); */
 
 // ******************************************
 
